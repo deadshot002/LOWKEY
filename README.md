@@ -1,158 +1,582 @@
-<p align="center">
-  <a href="https://www.medusajs.com">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    </picture>
-  </a>
-</p>
-<h1 align="center">
-  Medusa DTC Starter
-</h1>
-
-<h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
-</h4>
+# LOWKEY
 
 <p align="center">
-  Building blocks for digital commerce
+  <strong>Modern Direct-to-Consumer Ecommerce Platform</strong>
 </p>
+
 <p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/develop/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Medusa is released under the MIT license." />
-  </a>
-  <a href="https://circleci.com/gh/medusajs/medusa">
-    <img src="https://circleci.com/gh/medusajs/medusa.svg?style=shield" alt="Current CircleCI build status." />
-  </a>
-  <a href="https://github.com/medusajs/medusa/blob/develop/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
+  A full-stack ecommerce platform built with Medusa, Next.js, PostgreSQL, and modern web technologies.
 </p>
 
-# Medusa DTC Starter
+<p align="center">
+  <a href="https://github.com/medusajs/medusa">
+    <img src="https://img.shields.io/badge/Powered%20by-Medusa-8B5CF6" alt="Powered by Medusa" />
+  </a>
+  <img src="https://img.shields.io/badge/Next.js-16-black" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Node.js-20%2B-green" alt="Node.js" />
+  <img src="https://img.shields.io/badge/PostgreSQL-15%2B-blue" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" />
+</p>
 
-A production-ready monorepo starter for direct-to-consumer ecommerce stores powered by Medusa and Next.js. Includes a fully featured storefront with product browsing, cart, checkout, customer accounts, and order management.
+---
+
+## About LOWKEY
+
+**LOWKEY** is a modern direct-to-consumer ecommerce platform designed for selling products online with a flexible and scalable commerce backend.
+
+The project uses **Medusa** as the commerce engine and provides a customizable storefront, product catalog, cart, checkout, customer accounts, order management, and administrative functionality.
+
+The goal is to build a production-ready ecommerce experience while keeping the platform modular and easy to extend.
+
+---
 
 ## Features
 
-- All of [Medusa's commerce features](https://docs.medusajs.com/resources/commerce-modules)
-- Multi-region support with automatic country detection
-- Product catalog with variant selection
-- Cart with promotion codes
-- Multi-step checkout with shipping and payment
-- Customer accounts with order history and address management
-- Order transfer between accounts
+### Ecommerce
 
-## Getting Started
+- Product catalog
+- Product variants
+- Product categories
+- Brand management
+- Product search
+- Shopping cart
+- Promotion codes
+- Multi-step checkout
+- Shipping options
+- Payment integration
+- Customer accounts
+- Customer addresses
+- Order history
+- Order management
+- Multi-region support
+- Country/region detection
 
-### Deploy with Medusa Cloud
+### Administration
 
-The fastest way to get started is deploying with [Medusa Cloud](https://cloud.medusajs.com):
+- Medusa Admin dashboard
+- Product management
+- Inventory management
+- Order management
+- Customer management
+- Promotions
+- Regions and currencies
+- Sales channels
+- Payment and fulfillment configuration
 
-1. [Create a Medusa Cloud account](https://cloud.medusajs.com)
-2. Deploy this starter directly from your dashboard
+### Developer Features
 
-### Local Installation
+- TypeScript
+- Next.js storefront
+- Medusa commerce backend
+- PostgreSQL database
+- Turborepo monorepo
+- API-based architecture
+- Custom Medusa workflows
+- Custom API routes
+- Custom modules
+- Docker support
+- Environment-based configuration
 
-> **Prerequisites:
->
-> - [Node.js](https://nodejs.org/) v20+
-> - [PostgreSQL](https://www.postgresql.org/) v15+
-> - [pnpm](https://pnpm.io/) v10+
+---
 
-1. Clone the repository and install dependencies:
+## Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Next.js** | Storefront |
+| **React** | Frontend UI |
+| **TypeScript** | Application development |
+| **Medusa** | Commerce backend |
+| **PostgreSQL** | Database |
+| **Node.js** | Runtime |
+| **Turborepo** | Monorepo management |
+| **pnpm** | Package management |
+| **Docker** | Development infrastructure |
+
+---
+
+## Project Structure
+
+```text
+.
+├── apps/
+│   ├── backend/
+│   │   ├── medusa-config.ts
+│   │   ├── integration-tests/
+│   │   └── src/
+│   │       ├── admin/
+│   │       ├── api/
+│   │       ├── jobs/
+│   │       ├── links/
+│   │       ├── migration-scripts/
+│   │       ├── modules/
+│   │       ├── subscribers/
+│   │       └── workflows/
+│   │
+│   └── storefront/
+│       └── Next.js application
+│
+├── eslint.config.ts
+├── turbo.json
+├── package.json
+└── README.md
+```
+
+> `apps/storefront/` is optional. If it is not included in a particular installation, the project can run as a backend-only Medusa application.
+
+---
+
+# Getting Started
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js 20+
+- PostgreSQL 15+
+- pnpm 10+
+- Git
+
+---
+
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/medusajs/dtc-starter.git
-cd dtc-starter
+git clone <YOUR-REPOSITORY-URL>
+cd <YOUR-REPOSITORY-DIRECTORY>
+```
+
+Install dependencies:
+
+```bash
 pnpm install
 ```
 
-2. Set up environment variables for the backend:
+---
+
+## 2. Configure the Backend
+
+Copy the environment template:
 
 ```bash
 cp apps/backend/.env.template apps/backend/.env
 ```
 
-3. Set the database URL in `apps/backend.env`:
+Configure the database connection in:
 
-```bash
-# Replace with actual database URL, make sure the database exists.
-DATABASE_URL=postgres://postgres:@localhost:5432/medusa-dtc-starter
+```text
+apps/backend/.env
 ```
 
-4. Run migrations:
+Example:
+
+```env
+DATABASE_URL=postgres://postgres:YOUR_PASSWORD@localhost:5432/lowkey
+```
+
+> Never commit `.env` files or expose database passwords, API keys, JWT secrets, or other credentials.
+
+---
+
+## 3. Create the Database
+
+Create a PostgreSQL database for LOWKEY.
+
+Example:
+
+```sql
+CREATE DATABASE lowkey;
+```
+
+Then run the Medusa migrations:
 
 ```bash
 cd apps/backend
-pnpm medusa db:migrate
+pnpm exec medusa db:migrate
 ```
 
-5. Add admin user:
+---
+
+## 4. Create an Admin User
+
+From the backend directory:
 
 ```bash
-cd apps/backend
-pnpm medusa user -e admin@test.com -p supersecret
+pnpm exec medusa user -e admin@example.com -p YOUR_PASSWORD
 ```
 
-6. Start Medusa backend:
+Use the credentials you created to access the Medusa Admin dashboard.
+
+---
+
+## 5. Start the Backend
+
+From:
+
+```text
+apps/backend
+```
+
+run:
 
 ```bash
-cd apps/backend
 pnpm dev
 ```
 
-7. Open the admin dashboard at `localhost:9000/app` and log in. Retrieve your publishable API key at Settings > Publishable API key.
+The Medusa backend runs by default at:
 
-8. Set up environment variables for the storefront:
+```text
+http://localhost:9000
+```
+
+The admin dashboard is available at:
+
+```text
+http://localhost:9000/app
+```
+
+---
+
+## 6. Configure the Storefront
+
+If the storefront is included, create its environment file:
 
 ```bash
 cp apps/storefront/.env.template apps/storefront/.env.local
 ```
 
-9. Update `apps/storefront/.env.local` with your Medusa publishable API key:
+Configure:
 
-```bash
-NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=pk_6c3...
+```env
+NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=your_publishable_key
+NEXT_PUBLIC_MEDUSA_BACKEND_URL=http://localhost:9000
+NEXT_PUBLIC_DEFAULT_REGION=in
+NEXT_PUBLIC_BASE_URL=http://localhost:8000
 ```
 
-10.  Start storefront:
+### Publishable API Key
+
+After logging into Medusa Admin, retrieve your publishable API key from:
+
+```text
+Settings → Publishable API Keys
+```
+
+Then add it to:
+
+```text
+apps/storefront/.env.local
+```
+
+Example:
+
+```env
+NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=pk_...
+```
+
+---
+
+## 7. Start the Storefront
+
+From:
+
+```text
+apps/storefront
+```
+
+run:
 
 ```bash
-cd apps/storefront
 pnpm dev
 ```
 
-The storefront runs on `http://localhost:8000`.
+The LOWKEY storefront will be available at:
 
-You can slo run the following command from the root to start both backend and storefront:
+```text
+http://localhost:8000
+```
+
+---
+
+## Run Everything
+
+If the repository's root scripts are configured for both applications, you can start the development environment from the root:
 
 ```bash
 pnpm dev
 ```
 
-## Configuration
+This starts the available applications through Turborepo.
 
-The storefront is configured via environment variables in `apps/storefront/.env.local`:
+---
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` | Publishable API key from your Medusa backend | — |
-| `NEXT_PUBLIC_MEDUSA_BACKEND_URL` | URL of your Medusa backend | `http://localhost:9000` |
-| `NEXT_PUBLIC_DEFAULT_REGION` | Default region country code | `dk` |
-| `NEXT_PUBLIC_BASE_URL` | Base URL of the storefront | `https://localhost:8000` |
-| `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key (optional) | — |
+# Environment Variables
 
-## Resources
+## Backend
 
-- [Medusa Documentation](https://docs.medusajs.com)
-- [Medusa Cloud](https://cloud.medusajs.com)
+Backend configuration is stored in:
+
+```text
+apps/backend/.env
+```
+
+Common variables include:
+
+```env
+DATABASE_URL=
+STORE_CORS=
+ADMIN_CORS=
+AUTH_CORS=
+REDIS_URL=
+JWT_SECRET=
+COOKIE_SECRET=
+```
+
+Never commit the actual values.
+
+---
+
+## Storefront
+
+Storefront configuration is stored in:
+
+```text
+apps/storefront/.env.local
+```
+
+| Variable | Description | Example |
+|---|---|---|
+| `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` | Medusa publishable API key | `pk_...` |
+| `NEXT_PUBLIC_MEDUSA_BACKEND_URL` | Medusa backend URL | `http://localhost:9000` |
+| `NEXT_PUBLIC_DEFAULT_REGION` | Default region/country | `in` |
+| `NEXT_PUBLIC_BASE_URL` | Storefront URL | `http://localhost:8000` |
+| `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key | Optional |
+
+---
+
+# Development Commands
+
+### Start development
+
+```bash
+pnpm dev
+```
+
+### Start backend
+
+```bash
+pnpm run backend:dev
+```
+
+### Start storefront
+
+```bash
+pnpm run storefront:dev
+```
+
+### Build
+
+```bash
+pnpm run build
+```
+
+### Start production
+
+```bash
+pnpm run start
+```
+
+### Lint
+
+```bash
+pnpm run lint
+```
+
+### Run tests
+
+```bash
+pnpm run test
+```
+
+---
+
+# Database Commands
+
+Generate migrations for a custom Medusa module:
+
+```bash
+cd apps/backend
+pnpm exec medusa db:generate <module-name>
+```
+
+Run migrations:
+
+```bash
+cd apps/backend
+pnpm exec medusa db:migrate
+```
+
+Create an admin user:
+
+```bash
+cd apps/backend
+pnpm exec medusa user -e admin@example.com -p YOUR_PASSWORD
+```
+
+---
+
+# Customization
+
+LOWKEY is designed to be extended beyond the default Medusa functionality.
+
+Custom functionality can be added through:
+
+```text
+apps/backend/src/
+├── admin/
+├── api/
+├── jobs/
+├── links/
+├── modules/
+├── subscribers/
+└── workflows/
+```
+
+### API Routes
+
+Backend API routes use Medusa's file-based routing system.
+
+Example:
+
+```text
+apps/backend/src/api/store/products/route.ts
+```
+
+### Workflows
+
+Business logic should be implemented using Medusa workflows rather than putting complex logic directly inside route handlers.
+
+### Modules
+
+Custom business domains can be implemented as Medusa modules containing:
+
+- Models
+- Services
+- Migrations
+- Module configuration
+
+---
+
+# Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │       LOWKEY        │
+                    │     Storefront      │
+                    │      Next.js        │
+                    └──────────┬──────────┘
+                               │
+                               │ Medusa API
+                               ▼
+                    ┌─────────────────────┐
+                    │   Medusa Backend    │
+                    │      Node.js        │
+                    └──────────┬──────────┘
+                               │
+              ┌────────────────┼────────────────┐
+              │                │                │
+              ▼                ▼                ▼
+        ┌──────────┐     ┌───────────┐    ┌──────────┐
+        │PostgreSQL│     │   Redis   │    │ Payments │
+        └──────────┘     └───────────┘    └──────────┘
+```
+
+---
+
+# Security
+
+Do not commit sensitive configuration.
+
+The following files should remain local:
+
+```text
+.env
+.env.local
+```
+
+Never commit:
+
+- Database passwords
+- JWT secrets
+- Cookie secrets
+- Stripe secret keys
+- API tokens
+- Publishable/private credentials that should remain secret
+- Production credentials
+
+Use environment variables for deployment configuration.
+
+---
+
+# License
+
+LOWKEY uses Medusa as its commerce engine.
+
+Medusa is released under the **MIT License**.
+
+Copyright (c) 2022 Medusa.
+
+The original Medusa license and copyright notice must remain with applicable Medusa source code.
+
+For the complete license, see:
+
+https://github.com/medusajs/medusa/blob/develop/LICENSE
+
+---
+
+# Credits
+
+Built with:
+
+- Medusa
+- Next.js
+- React
+- PostgreSQL
+- Node.js
+- Turborepo
+
+Medusa documentation:
+
+https://docs.medusajs.com
+
+Medusa website:
+
+https://medusajs.com
+
+---
+
+# Project Status
+
+LOWKEY is currently under active development.
+
+The platform is being developed with a focus on:
+
+- Modern ecommerce UX
+- Scalable commerce infrastructure
+- Product management
+- Customer accounts
+- Checkout
+- Payments
+- Inventory
+- Order management
+- Custom administration
+- Production deployment
+
+---
+
+<p align="center">
+  Built with Medusa and Next.js
+</p>
+<p align="center">
+  <strong>LOWKEY</strong>
+</p>
